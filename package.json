@@ -18,6 +18,7 @@
   "homepage": "https://github.com/mamady310/breweries#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.8.3"
+    "mongoose": "^5.8.3",
+    "node-fetch": "^2.6.0"
   }
 }

@@ -9,7 +9,7 @@ const breweryData = data.map(item => {
     brewery.phone = item.population
     brewery.website_url = item.website_url
 
-    return country
+    return brewery
 })
 console.log(breweryData)
 
