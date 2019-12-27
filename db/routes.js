@@ -4,6 +4,6 @@ const beerController = require ("./Controller/controller")
 
 const beerRouter = express.Router()
 
-beerRouter.get("/brewery")
+beerRouter.get("/brewery", beerController.drinks)
 
 module.exports = beerRouter

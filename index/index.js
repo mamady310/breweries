@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
-
-app.get('/brewery', (req, res) => res.send(''))
-
+const breweryRoutes = require('../db/routes')
 
 app.listen(5000, () => console.log('Example app listening on port 5000!'))
+
+app.use("/", breweryRoutes)
+
+app.get("/", (req, res) => {res.redirect('/brewery')})
