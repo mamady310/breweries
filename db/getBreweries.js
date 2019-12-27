@@ -1,6 +1,6 @@
 const fs = require('fs')
 const fetch = require('node-fetch');
-const url = 'https://api.openbrewerydb.org/breweries'
+const url = 'https://api.openbrewerydb.org/breweries?by_state=virginia'
 
 fetch(url)
     .then(res => res.json())
