@@ -6,7 +6,13 @@ module.exports = {
         Beer.find({}).then( (beer) => {
             res.json(beer)
         })
-    }
-},
+    },
+    findById: (req, res) => { 
+        Beer.findById({ _id: req.params.Id })
+          .then(beer => {
+            res.json(beer)
+          })
+      },
+}
  
 
