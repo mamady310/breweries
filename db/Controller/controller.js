@@ -19,6 +19,12 @@ module.exports = {
             res.json(beer)
           })
       },
+      showCity: (req, res) => {
+        Beer.find({city: req.params.city})
+          .then(beer => {
+            res.json(beer)
+          })
+      },
 }
  
 
