@@ -16,8 +16,8 @@ console.log(breweryData)
 Brewery.remove({})
     .then(() => {
         Brewery.create(breweryData)
-            .then(breweries => {
-                console.log(breweries)
+            .then((breweryReturn) => {
+                console.log(breweryReturn)
             })
             .catch(err => {
                 console.log(err)
