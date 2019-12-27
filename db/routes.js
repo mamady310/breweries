@@ -4,6 +4,10 @@ const beerController = require ("./Controller/controller")
 
 const beerRouter = express.Router()
 
-beerRouter.get("/brewery", beerController.drinks)
+beerRouter.get("/", beerController.drinks)
+beerRouter.get("/:Id", beerController.findById)
+beerRouter.get("/name/:showName", beerController.showName)
+beerRouter.get("/city/:showCity", beerController.showCity)
+
 
 module.exports = beerRouter
