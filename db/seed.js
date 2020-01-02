@@ -1,4 +1,4 @@
-const Brewery = require('../models/Brewery.js')
+const Brewery = require('./Brewery')
 const data = require('./data.json')
 
 
