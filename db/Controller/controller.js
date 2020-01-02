@@ -1,4 +1,4 @@
-const Beer = require("../../Models/Brewery.js")
+const Beer = require("../Brewery")
 
 
 module.exports = {
