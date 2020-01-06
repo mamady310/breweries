@@ -8,6 +8,7 @@ beerRouter.get("/", beerController.drinks)
 beerRouter.get("/:Id", beerController.findById)
 beerRouter.get("/name/:showName", beerController.showName)
 beerRouter.get("/city/:showCity", beerController.showCity)
+beerRouter.post("/create/:")
 
 
 module.exports = beerRouter

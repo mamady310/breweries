@@ -25,6 +25,11 @@ module.exports = {
             res.json(beer)
           })
       },
-}
+     createCustomer: (req, res) => {
+       Beer.create (req.body).then(Beer =>{
+        res.json(Beer) 
+       })
+     },
+    }
  
 
