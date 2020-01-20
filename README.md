@@ -23,4 +23,4 @@ To run this project, install it locally using NPM
 API call https://www.openbrewerydb.org/
 
 # Project Status
-Back end has been completed
+Back end has been completed 

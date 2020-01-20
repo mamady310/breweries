@@ -7,6 +7,11 @@ module.exports = {
             res.json(beer)
         })
     },
+    create: (req, res) => {
+      Beer.create(req.body).then(beer => {
+          res.json(beer)
+        })
+  },
     findById: (req, res) => { 
         Beer.findById({ _id: req.params.Id })
           .then(beer => {
