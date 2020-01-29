@@ -15,6 +15,12 @@ app.get("/", (req, res) => {res.send('/brewery')})
 
 app.set("port", process.env.PORT || 5000);
 
+app.post("/controller", (req, res) => {
+  List.create(req.body).then(list => {
+    res.json(list)
+  })
+})
+
 app.listen(app.get("port"), () => {
   console.log(`✅ PORT: ${app.get("port")} 🌟`);
 });
