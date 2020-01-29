@@ -4,25 +4,23 @@ const cors = require('cors')
 const bodyParser = require("body-parser")
 const breweryRoutes = require('./db/routes')
 
+
+app.use(bodyParser.json())
 app.use(cors());
 
-
-
-
 // app.listen(5000, () => console.log('Example app listening on port 5000!'))
-
 
 app.use("/", breweryRoutes)
 
 app.get("/", (req, res) => {res.send('/brewery')})
 
-app.use(parser.json())
+
 
 app.set("port", process.env.PORT || 5000);
 
-app.post("/controller", (req, res) => {
-  List.create(req.body).then(list => {
-    res.json(list)
+breweryRoutes.post("/create", (req, res) => {
+  Beer.create(req.body).then(beer => {
+    res.json(beer)
   })
 })
 
