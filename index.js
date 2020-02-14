@@ -7,15 +7,8 @@ const breweryRoutes = require('./db/routes')
 
 app.use(bodyParser.json())
 app.use(cors());
-
-// app.listen(5000, () => console.log('Example app listening on port 5000!'))
-
 app.use("/", breweryRoutes)
-
 app.get("/", (req, res) => {res.send('/brewery')})
-
-
-
 app.set("port", process.env.PORT || 5000);
 
 breweryRoutes.post("/create", (req, res) => {

@@ -13,10 +13,23 @@ module.exports = {
       state: req.body.state,
       phone: req.body.phone,
       website_url: req.body.website_url,
-    })
+    }   
+    )
     .then(beer => {
         res.json(beer)
       })
+},
+delete: (req, res) => {
+  Beer.create({
+    name: req.body.name,
+    city: req.body.city,
+    state: req.body.state,
+    phone: req.body.phone,
+    website_url: req.body.website_url,
+  })
+  .then( beer => {
+    res.json(beer)
+  })
 },
   findById: (req, res) => { 
       Beer.findById({ _id: req.params.Id })
